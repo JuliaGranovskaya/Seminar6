@@ -77,3 +77,40 @@
 //     return result;
 // }
 // ReversArray2(array);
+
+// Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// Console.Write("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.Write($"Если N = {N} -> ");
+// int[] array = new int[N];
+// array[0] = 0;
+// array[1] = 1;
+// Console.Write($"{array[0]} {array[1]} ");
+// for (int i = 2; i < N; i++)
+// {
+//     array[i] = array[i - 2] + array[i - 1];
+//     Console.Write($"{array[i]} ");
+// }
+
+// Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+// int[] GenerateRandomArray(int[] RandomArray)
+// {
+//     for (int i = 0; i < RandomArray.Length; i++)
+//     {
+//         RandomArray[i] = new Random().Next(1, 10);
+//     }
+//     return RandomArray;
+// }
+// void SaveArray(int[] Array)
+// {
+//     int[] ArrayCopy = new int[Array.Length];
+//     for (int i = 0; i < Array.Length; i++)
+//     {
+//         ArrayCopy[i] = Array[i];
+//         Console.Write($"{ArrayCopy[i]} ");
+//     }
+// }
+
+// int[] myarray = new int[5];
+// GenerateRandomArray(myarray);
+// SaveArray(myarray);
