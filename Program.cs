@@ -52,31 +52,24 @@
 // else Console.WriteLine("Треугольник существовать не может");
 
 // Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-// Console.Write("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int i = 0;
-// int[] array;
-// while (num > 1)
-// {
-//     if (num % 2 == 0)
-//     {
-//         array[i] = 0;
-//     }
-//     else array[i] = 1;
-// i++;
-// num = num / 2;
-// }
-// array[i] = 1;
-// int[] ReversArray2(int[] inArray)
-// {
-//     int[] result = new int[inArray.Length];
-//     for (int i = 0; i < inArray.Length; i++)
-//     {
-//         result[i] = inArray[inArray.Length - 1 - i];
-//     }
-//     return result;
-// }
-// ReversArray2(array);
+/*
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int i = 1;
+while (num > 0)
+{
+    num = num / 2;
+    i++;
+}
+int number = i * 2;
+double result = 0;
+while (i > 0)
+{
+    result = result + (number % 2) / Math.Pow(10, i);
+    i = i - 1;
+}
+Console.WriteLine(result);
+*/
 
 // Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
 // Console.Write("Введите число: ");
@@ -114,3 +107,66 @@
 // int[] myarray = new int[5];
 // GenerateRandomArray(myarray);
 // SaveArray(myarray);
+
+// Домашнее задание
+
+// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+/*
+Console.Write("Введите количество чисел: ");
+int M = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[M];
+int i = 0;
+if (M <= 0)
+{
+    Console.Write("Введено некорректное значение");
+}
+else
+{
+while (M > 0)
+{
+    Console.Write("Введите число: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+    M = M - 1;
+    i++;
+}
+}
+int index = 0;
+for (int count = 0; count < array.Length; count++)
+{
+    if (array[count] > 0)
+    {
+        index++;
+    }
+}
+Console.WriteLine(index);
+*/
+
+// Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+/*
+Console.Write("Введите значение b1: ");
+double b1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите значение b2: ");
+double b2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите значение k1: ");
+double k1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите значение k2: ");
+double k2 = Convert.ToDouble(Console.ReadLine());
+if (k1 == k2)
+{
+    if (b1 == b2)
+    {
+        Console.WriteLine("Прямые совпадают");
+    }
+    else
+    {
+        Console.WriteLine("Прямые паралленьны друг другу");
+    }
+}
+else
+{
+    double x = (b2 - b1)/(k1 - k2);
+    Console.WriteLine($"x = {x}");
+    double y = k1 * x + b1;
+    Console.WriteLine($"y = {y}");
+}
+*/
