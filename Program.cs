@@ -55,22 +55,16 @@
 /*
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int i = 1;
+int remainder;
+string result = string.Empty;
 while (num > 0)
 {
-    num = num / 2;
-    i++;
+    remainder = num % 2;
+    num /= 2;
+    result = remainder.ToString() + result;
 }
-int number = i * 2;
-double result = 0;
-while (i > 0)
-{
-    result = result + (number % 2) / Math.Pow(10, i);
-    i = i - 1;
-}
-Console.WriteLine(result);
+Console.WriteLine("Binary:  {0}",result);
 */
-
 // Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
 // Console.Write("Введите число: ");
 // int N = Convert.ToInt32(Console.ReadLine());
