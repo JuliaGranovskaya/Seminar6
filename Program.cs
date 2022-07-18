@@ -165,7 +165,7 @@ if (k1 == k2)
 else
 {
     double x = (b2 - b1)/(k1 - k2);
-    Console.WriteLine($"x = {x}");
+    Console.WriteLine($"x = {x:f1}");
     double y = k1 * x + b1;
     Console.WriteLine($"y = {y}");
 }
